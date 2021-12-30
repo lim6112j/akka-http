@@ -66,5 +66,8 @@ object LowLevelAPI extends App {
     connection =>
       connection.handleWithSyncHandler(requestHandler)
   }
-  Http().bind("localhost", 8080).runWith(httpSyncConnectionHandler)
+  //Http().bind("localhost", 8080).runWith(httpSyncConnectionHandler)
+  //
+  // shorthand version
+  //Http().bindAndHandleSync(requestHandler, "localhost", 8001)
 }
